@@ -54,8 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EfDbContext.cs" />
+    <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="Entity\Blog.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\Order.cs" />
     <Compile Include="Map\BlogMap.cs" />
+    <Compile Include="Map\CustomerMap.cs" />
+    <Compile Include="Map\OrderMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
