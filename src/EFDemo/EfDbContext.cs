@@ -24,6 +24,8 @@ namespace EFDemo
         public DbSet<Order> Orders { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Member> Members { get; set; }
+        public DbSet<MemberContact> MemberContacts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -57,56 +57,81 @@ namespace EFDemo
                 //}
                 //efDbContext.SaveChanges();
 
-                var student = new Student
+                //var student = new Student
+                //{
+                //    Name = "张三",
+                //    Age = 26,
+                //    CreatedTime = DateTime.Now,
+                //    ModifiedTime = DateTime.Now,
+                //    Courses = new List<Course>
+                //    {
+                //        new Course
+                //        {
+                //            Name = "C#",
+                //            MaximumStrength = 12,
+                //            CreatedTime = DateTime.Now,
+                //            ModifiedTime = DateTime.Now
+                //        },
+                //        new Course
+                //        {
+                //            Name = "Entity Framework 6.x",
+                //            MaximumStrength = 12,
+                //            CreatedTime = DateTime.Now,
+                //            ModifiedTime = DateTime.Now
+                //        }
+                //    }
+                //};
+                //var course = new Course
+                //{
+                //    Name = "Web Api",
+                //    MaximumStrength = 12,
+                //    CreatedTime = DateTime.Now,
+                //    ModifiedTime = DateTime.Now,
+                //    Students = new List<Student>
+                //    {
+                //        new Student()
+                //        {
+                //            Name = "李四",
+                //            Age = 25,
+                //            CreatedTime = DateTime.Now,
+                //            ModifiedTime = DateTime.Now
+                //        },
+                //        new Student()
+                //        {
+                //            Name = "王五",
+                //            Age = 26,
+                //            CreatedTime = DateTime.Now,
+                //            ModifiedTime = DateTime.Now
+                //        }
+                //    }
+                //};
+                //efDbContext.Students.Add(student);
+                //efDbContext.Courses.Add(course);
+                //efDbContext.SaveChanges();
+
+                var member = new Member()
                 {
-                    Name = "张三",
-                    Age = 26,
-                    CreatedTime = DateTime.Now,
-                    ModifiedTime = DateTime.Now,
-                    Courses = new List<Course>
+                    Name = "张三"
+                };
+                var member2 = new Member()
+                {
+                    Name = "李四",
+                    Contact = new MemberContact()
                     {
-                        new Course
-                        {
-                            Name = "C#",
-                            MaximumStrength = 12,
-                            CreatedTime = DateTime.Now,
-                            ModifiedTime = DateTime.Now
-                        },
-                        new Course
-                        {
-                            Name = "Entity Framework 6.x",
-                            MaximumStrength = 12,
-                            CreatedTime = DateTime.Now,
-                            ModifiedTime = DateTime.Now
-                        }
+                        ContactNumber = "13755053757",
                     }
                 };
-                var course = new Course
+                var member3 = new Member()
                 {
-                    Name = "Web Api",
-                    MaximumStrength = 12,
-                    CreatedTime = DateTime.Now,
-                    ModifiedTime = DateTime.Now,
-                    Students = new List<Student>
+                    Name = "王五",
+                    Contact = new MemberContact()
                     {
-                        new Student()
-                        {
-                            Name = "李四",
-                            Age = 25,
-                            CreatedTime = DateTime.Now,
-                            ModifiedTime = DateTime.Now
-                        },
-                        new Student()
-                        {
-                            Name = "王五",
-                            Age = 26,
-                            CreatedTime = DateTime.Now,
-                            ModifiedTime = DateTime.Now
-                        }
+                        ContactNumber = "13755050241",
                     }
                 };
-                efDbContext.Students.Add(student);
-                efDbContext.Courses.Add(course);
+                efDbContext.Members.Add(member);
+                efDbContext.Members.Add(member2);
+                efDbContext.Members.Add(member3);
                 efDbContext.SaveChanges();
             }
         }
