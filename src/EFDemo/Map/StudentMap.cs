@@ -9,26 +9,24 @@ using EFDemo.Entity;
 
 namespace EFDemo.Map
 {
-    public class OrderMap : EntityTypeConfiguration<Order>
+    public class StudentMap : EntityTypeConfiguration<Student>
     {
-        public OrderMap()
+        public StudentMap()
         {
-            // 表名
-            ToTable("Orders");
+            ToTable("Students");
 
-            // 主键
             HasKey(a => a.Id);
 
-            // 属性
             Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(a => a.Quanatity);
-            Property(a => a.Price);
-            Property(a => a.CustomerId);
+            Property(a => a.Name).IsFixedLength().HasMaxLength(50);
+            Property(a => a.Age);
             Property(a => a.CreatedTime);
             Property(a => a.ModifiedTime);
 
-            // 关系
-            HasRequired(a => a.Customer).WithMany(a => a.Orders).HasForeignKey(a => a.CustomerId).WillCascadeOnDelete(true);
+            HasMany(a => a.Courses).WithMany(a => a.Students)
+                .Map(a => a.ToTable("StudentCourses")
+                    .MapLeftKey("StudentId")
+                    .MapRightKey("CourseId"));
         }
     }
 }

@@ -23,31 +23,90 @@ namespace EFDemo
 
             using (var efDbContext = new EfDbContext())
             {
-                var customer = new Customer
+                //var customer1 = new Customer
+                //{
+                //    Name = "张三",
+                //    Email = "741003989@qq.com",
+                //    CreatedTime = DateTime.Now,
+                //    ModifiedTime = DateTime.Now,
+                //    Orders = new List<Order>
+                //    {
+                //        new Order
+                //        {
+                //            Quanatity = 12,
+                //            Price = 1500,
+                //            CreatedTime = DateTime.Now,
+                //            ModifiedTime = DateTime.Now
+                //        },
+                //        new Order
+                //        {
+                //            Quanatity = 10,
+                //            Price = 2500,
+                //            CreatedTime = DateTime.Now,
+                //            ModifiedTime = DateTime.Now
+                //        }
+                //    }
+                //};
+                //efDbContext.Customers.Add(customer1);
+                //efDbContext.SaveChanges();
+
+                //var customer = efDbContext.Customers.FirstOrDefault(a => a.Id == 1);
+                //if (customer != null)
+                //{
+                //    efDbContext.Customers.Remove(customer);
+                //}
+                //efDbContext.SaveChanges();
+
+                var student = new Student
                 {
                     Name = "张三",
-                    Email = "741003989@qq.com",
+                    Age = 26,
                     CreatedTime = DateTime.Now,
                     ModifiedTime = DateTime.Now,
-                    Orders = new List<Order>
+                    Courses = new List<Course>
                     {
-                        new Order
+                        new Course
                         {
-                            Quanatity = 12,
-                            Price = 1500,
+                            Name = "C#",
+                            MaximumStrength = 12,
                             CreatedTime = DateTime.Now,
                             ModifiedTime = DateTime.Now
                         },
-                        new Order
+                        new Course
                         {
-                            Quanatity = 10,
-                            Price = 2500,
+                            Name = "Entity Framework 6.x",
+                            MaximumStrength = 12,
                             CreatedTime = DateTime.Now,
                             ModifiedTime = DateTime.Now
                         }
                     }
                 };
-                efDbContext.Customers.Add(customer);
+                var course = new Course
+                {
+                    Name = "Web Api",
+                    MaximumStrength = 12,
+                    CreatedTime = DateTime.Now,
+                    ModifiedTime = DateTime.Now,
+                    Students = new List<Student>
+                    {
+                        new Student()
+                        {
+                            Name = "李四",
+                            Age = 25,
+                            CreatedTime = DateTime.Now,
+                            ModifiedTime = DateTime.Now
+                        },
+                        new Student()
+                        {
+                            Name = "王五",
+                            Age = 26,
+                            CreatedTime = DateTime.Now,
+                            ModifiedTime = DateTime.Now
+                        }
+                    }
+                };
+                efDbContext.Students.Add(student);
+                efDbContext.Courses.Add(course);
                 efDbContext.SaveChanges();
             }
         }
