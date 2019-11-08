@@ -109,30 +109,29 @@ namespace EFDemo
                 //efDbContext.Courses.Add(course);
                 //efDbContext.SaveChanges();
 
-                var member = new Member()
-                {
-                    Name = "张三"
-                };
-                var member2 = new Member()
-                {
-                    Name = "李四",
-                    Contact = new MemberContact()
-                    {
-                        ContactNumber = "13755053757",
-                    }
-                };
-                var member3 = new Member()
-                {
-                    Name = "王五",
-                    Contact = new MemberContact()
-                    {
-                        ContactNumber = "13755050241",
-                    }
-                };
-                efDbContext.Members.Add(member);
-                efDbContext.Members.Add(member2);
-                efDbContext.Members.Add(member3);
-                efDbContext.SaveChanges();
+                //var member = new Member()
+                //{
+                //    Name = "张三"
+                //};
+                //var member2 = new Member()
+                //{
+                //    Name = "李四",
+                //    Contact = new MemberContact()
+                //    {
+                //        ContactNumber = "13755053757",
+                //    }
+                //};
+                //var member3 = new Member()
+                //{
+                //    Name = "王五",
+                //    Contact = new MemberContact()
+                //    {
+                //        ContactNumber = "13755050241",
+                //    }
+                //};
+                //efDbContext.Members.Add(member);
+                //efDbContext.Members.Add(member2);
+                //efDbContext.Members.Add(member3);
             }
         }
     }

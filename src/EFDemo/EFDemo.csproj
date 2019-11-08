@@ -58,17 +58,33 @@
     <Compile Include="Entity\Blog.cs" />
     <Compile Include="Entity\Course.cs" />
     <Compile Include="Entity\Customer.cs" />
-    <Compile Include="Entity\Order.cs" />
-    <Compile Include="Entity\Student.cs" />
     <Compile Include="Entity\Member.cs" />
     <Compile Include="Entity\MemberContact.cs" />
-    <Compile Include="Map\BlogMap.cs" />
+    <Compile Include="Entity\Order.cs" />
+    <Compile Include="Entity\Student.cs" />
     <Compile Include="Map\CourseMap.cs" />
     <Compile Include="Map\CustomerMap.cs" />
     <Compile Include="Map\MemberContactMap.cs" />
     <Compile Include="Map\MemberMap.cs" />
     <Compile Include="Map\OrderMap.cs" />
     <Compile Include="Map\StudentMap.cs" />
+    <Compile Include="Migrations\201911071508149_DatabaseInit.cs" />
+    <Compile Include="Migrations\201911071508149_DatabaseInit.designer.cs">
+      <DependentUpon>201911071508149_DatabaseInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911071511190_AddCourseAndStudentTable.cs" />
+    <Compile Include="Migrations\201911071511190_AddCourseAndStudentTable.designer.cs">
+      <DependentUpon>201911071511190_AddCourseAndStudentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911080336427_AddCustomerAndOrderTable.cs" />
+    <Compile Include="Migrations\201911080336427_AddCustomerAndOrderTable.designer.cs">
+      <DependentUpon>201911080336427_AddCustomerAndOrderTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911080347031_AddMemberAndContactTable.cs" />
+    <Compile Include="Migrations\201911080347031_AddMemberAndContactTable.designer.cs">
+      <DependentUpon>201911080347031_AddMemberAndContactTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +93,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911071508149_DatabaseInit.resx">
+      <DependentUpon>201911071508149_DatabaseInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911071511190_AddCourseAndStudentTable.resx">
+      <DependentUpon>201911071511190_AddCourseAndStudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911080336427_AddCustomerAndOrderTable.resx">
+      <DependentUpon>201911080336427_AddCustomerAndOrderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911080347031_AddMemberAndContactTable.resx">
+      <DependentUpon>201911080347031_AddMemberAndContactTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -17,7 +17,9 @@ namespace EFDemo.Map
 
             HasKey(a => a.Id);
 
-            Property(a => a.Id).HasColumnName("MemberId").HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+
+            HasRequired(a => a.Member).WithOptional(a => a.Contact).Map(a => a.MapKey("Student_Id"));
         }
     }
 }

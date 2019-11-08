@@ -19,7 +19,7 @@ namespace EFDemo.Map
 
             Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            HasOptional(a => a.Contact).WithRequired(a => a.Member);
+            //HasOptional(a => a.Contact).WithOptionalDependent(a => a.Member);
         }
     }
 }
